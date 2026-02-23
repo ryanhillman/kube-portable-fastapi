@@ -36,21 +36,21 @@ flowchart LR
 
 ## Stack
 
-Python
+-Python
 
-FastAPI
+-FastAPI
 
-PostgreSQL 16
+-PostgreSQL 16
 
-Docker
+-Docker
 
-Kubernetes
+-Kubernetes
 
-Kustomize
+-Kustomize
 
-NGINX Ingress
+-NGINX Ingress
 
-GitHub Actions
+-GitHub Actions
 
 ## Deploy
 
@@ -76,29 +76,32 @@ Expected:
 
 ## What This Project Demonstrates
 
-Multi-cloud Kubernetes portability
+-Multi-cloud Kubernetes portability
 
-Stateful workloads with persistent storage
+-Stateful workloads with persistent storage
 
-Ingress + LoadBalancer networking
+-Ingress + LoadBalancer networking
 
-Readiness and liveness probes
+-Readiness and liveness probes
 
-CI validation of Kustomize overlays
+-CI validation of Kustomize overlays
 
 ## Multi-Cloud Deployment Validation
 
 <p align="center">
   <b>Azure AKS</b><br/>
+    
   <img src="docs/aks.png" width="800"/>
 </p>
 
 <p align="center">
   <b>AWS EKS</b><br/>
+    
   <img src="docs/eks.png" width="800"/>
 </p>
 
 <p align="center">
   <b>Google GKE</b><br/>
+    
   <img src="docs/gke.png" width="800"/>
 </p>
