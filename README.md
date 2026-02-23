@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Architecture-Multi--Cloud-white" />
+  <img src="https://img.shields.io/badge/Architecture-Multi--Cloud-black" />
   <img src="https://img.shields.io/badge/Container-Docker-2496ED?logo=docker&logoColor=white" />
   <img src="https://img.shields.io/badge/Orchestrated%20With-Kubernetes-326CE5?logo=kubernetes&logoColor=white" />
 </p>
