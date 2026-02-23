@@ -1,3 +1,5 @@
+[![CI](https://github.com/ryanhillman/kube-portable-fastapi/actions/workflows/ci.yaml/badge.svg)](https://github.com/ryanhillman/kube-portable-fastapi/actions/workflows/ci.yaml)
+[![Release](https://github.com/ryanhillman/kube-portable-fastapi/actions/workflows/release-ghcr.yaml/badge.svg)](https://github.com/ryanhillman/kube-portable-fastapi/actions/workflows/release-ghcr.yaml)
 # Kube Portable FastAPI
 
 Multi-cloud Kubernetes deployment of a FastAPI app with PostgreSQL.
