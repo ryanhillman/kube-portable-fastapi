@@ -1,8 +1,8 @@
-#Kube Portable FastAPI
+# Kube Portable FastAPI
 
 Multi-cloud Kubernetes deployment of a FastAPI app with PostgreSQL.
 
-##Deployed to:
+## Deployed to:
 
 Azure AKS
 
@@ -32,7 +32,7 @@ flowchart LR
     GKE --> GCP[Google GKE Cluster];
 ```
 
-##Stack
+## Stack
 
 Python
 
@@ -50,7 +50,7 @@ NGINX Ingress
 
 GitHub Actions
 
-##Deploy
+## Deploy
 
 AKS:
 
@@ -72,7 +72,7 @@ Expected:
 
 ```{"ok":true}```
 
-##What This Project Demonstrates
+## What This Project Demonstrates
 
 Multi-cloud Kubernetes portability
 
