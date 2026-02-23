@@ -1,5 +1,9 @@
-[![CI](https://github.com/ryanhillman/kube-portable-fastapi/actions/workflows/ci.yaml/badge.svg)](https://github.com/ryanhillman/kube-portable-fastapi/actions/workflows/ci.yaml)
-[![Release](https://github.com/ryanhillman/kube-portable-fastapi/actions/workflows/release-ghcr.yaml/badge.svg)](https://github.com/ryanhillman/kube-portable-fastapi/actions/workflows/release-ghcr.yaml)
+<p align="center">
+  <img src="https://img.shields.io/badge/Framework-FastAPI-009688?logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Container-Docker-2496ED?logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/Orchestrated%20With-Kubernetes-326CE5?logo=kubernetes&logoColor=white" />
+  <img src="https://img.shields.io/badge/Architecture-Multi--Cloud-black" />
+</p>
 # Kube Portable FastAPI
 
 Multi-cloud Kubernetes deployment of a FastAPI app with PostgreSQL.
