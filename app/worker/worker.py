@@ -1,4 +1,5 @@
-import os, time
+import os
+import time
 import psycopg2
 
 DB_HOST = os.getenv("DB_HOST", "postgres")
