@@ -18,6 +18,8 @@ flowchart TD
     Ingress --> API[FastAPI Deployment];
     API --> DB[(PostgreSQL StatefulSet)];
 ```
+
+
 ```mermaid
 flowchart LR
 
