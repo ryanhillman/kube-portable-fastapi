@@ -1,3 +1,4 @@
+```mermaid
 flowchart LR
   U[Client] -->|HTTP Host: api.localtest.me| LB[Cloud LoadBalancer - AKS / EKS / GKE]
   LB --> NGINX[ingress-nginx Controller Service]
@@ -20,6 +21,8 @@ flowchart LR
     PG
     PVC
   end
+...
+```
 
   subgraph Cloud Provider Storage
     PV
