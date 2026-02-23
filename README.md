@@ -1,29 +1,82 @@
-```mermaid
+Kube Portable FastAPI
+
+Multi-cloud Kubernetes deployment of a FastAPI app with PostgreSQL.
+
+Deployed to:
+
+Azure AKS
+
+AWS EKS
+
+Google GKE
+
+flowchart TD
+
+    User[Client] --> LB[Cloud LoadBalancer]
+    LB --> Ingress[NGINX Ingress Controller]
+    Ingress --> API[FastAPI Deployment]
+    API --> DB[(PostgreSQL StatefulSet)]
+
 flowchart LR
-  U[Client] -->|HTTP Host: api.localtest.me| LB[Cloud LoadBalancer - AKS / EKS / GKE]
-  LB --> NGINX[ingress-nginx Controller Service]
-  NGINX -->|Ingress rule| SVCAPI[Service: api]
-  SVCAPI --> API[Deployment: api (FastAPI x2)]
 
-  W[Deployment: worker] -->|background jobs| API
+    Base[Base Manifests]
 
-  API -->|reads/writes| SVCDB[Service: postgres]
-  SVCDB --> PG[StatefulSet: postgres-0]
-  PG --> PVC[PVC: data-postgres-0]
-  PVC --> PV[(Cloud Disk Volume)]
+    Base --> AKS[AKS Overlay]
+    Base --> EKS[EKS Overlay]
+    Base --> GKE[GKE Overlay]
 
-  subgraph Kubernetes Cluster
-    NGINX
-    SVCAPI
-    API
-    W
-    SVCDB
-    PG
-    PVC
-  end
-...
-```
+    AKS --> Azure[Azure AKS Cluster]
+    EKS --> AWS[AWS EKS Cluster]
+    GKE --> GCP[Google GKE Cluster]
 
-  subgraph Cloud Provider Storage
-    PV
-  end
+Stack
+
+Python
+
+FastAPI
+
+PostgreSQL 16
+
+Docker
+
+Kubernetes
+
+Kustomize
+
+NGINX Ingress
+
+GitHub Actions
+
+Deploy
+
+AKS:
+
+kubectl apply -k k8s/overlays/aks
+
+EKS:
+
+kubectl apply -k k8s/overlays/eks
+
+GKE:
+
+kubectl apply -k k8s/overlays/gke
+
+Health check:
+
+curl -H "Host: api.localtest.me" http://<EXTERNAL-IP>/healthz
+
+Expected:
+
+{"ok":true}
+
+What This Project Demonstrates
+
+Multi-cloud Kubernetes portability
+
+Stateful workloads with persistent storage
+
+Ingress + LoadBalancer networking
+
+Readiness and liveness probes
+
+CI validation of Kustomize overlays
