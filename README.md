@@ -10,15 +10,15 @@ AWS EKS
 
 Google GKE
 
-'''mermaid
+```mermaid
 flowchart TD
 
     User[Client] --> LB[Cloud LoadBalancer];
     LB --> Ingress[NGINX Ingress Controller];
     Ingress --> API[FastAPI Deployment];
     API --> DB[(PostgreSQL StatefulSet)];
-'''
-'''mermaid
+```
+```mermaid
 flowchart LR
 
     Base[Base Manifests];
@@ -30,7 +30,7 @@ flowchart LR
     AKS --> Azure[Azure AKS Cluster];
     EKS --> AWS[AWS EKS Cluster];
     GKE --> GCP[Google GKE Cluster];
-'''
+```
 
 Stack
 
