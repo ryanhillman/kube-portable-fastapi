@@ -8,6 +8,10 @@
 
 Multi-cloud Kubernetes deployment of a FastAPI app with PostgreSQL.
 
+## Demo
+
+https://youtu.be/fBA1P7DVSyI
+
 ## Deployed to:
 
 Azure AKS
@@ -91,23 +95,3 @@ Expected:
 -Readiness and liveness probes
 
 -CI validation of Kustomize overlays
-
-## Multi-Cloud Deployment Validation
-
-<p align="center">
-  <b>Azure AKS</b><br/>
-    
-  <img src="docs/aks.png" width="800"/>
-</p>
-
-<p align="center">
-  <b>AWS EKS</b><br/>
-    
-  <img src="docs/eks.png" width="800"/>
-</p>
-
-<p align="center">
-  <b>Google GKE</b><br/>
-    
-  <img src="docs/gke.png" width="800"/>
-</p>
