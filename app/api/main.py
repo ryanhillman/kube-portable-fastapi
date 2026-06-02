@@ -1,5 +1,6 @@
 import os
 import psycopg2
+import psycopg2.extras
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -61,3 +62,27 @@ def next_job():
             if not row:
                 return {"job": None}
             return {"job": {"id": row[0], "payload": row[1], "status": row[2]}}
+
+@app.get("/jobs/{job_id}")
+def get_job(job_id: int):
+    with conn() as c:
+        with c.cursor() as cur:
+            cur.execute(
+                """
+                SELECT id, payload, status
+                FROM jobs
+                WHERE id = %s;
+                """,
+                (job_id,)
+            )
+
+            row = cur.fetchone()
+
+            if not row:
+                return {"error": "job not found"}
+
+            return {
+                "id": row[0],
+                "payload": row[1],
+                "status": row[2]
+            }
